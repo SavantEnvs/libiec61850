@@ -1,0 +1,9 @@
+project: savantenvs/libiec61850
+target: fuzz-mms-server-decode-mms-pdu
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-mms-server-decode-mms-pdu/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_mms_server_decode_mms_pdu
+    libfuzzer: true
+    timeout: 5

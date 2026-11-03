@@ -1,0 +1,9 @@
+project: savantenvs/libiec61850
+target: fuzz-acse-parse
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-acse-parse/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_acse_parse
+    libfuzzer: true
+    timeout: 5

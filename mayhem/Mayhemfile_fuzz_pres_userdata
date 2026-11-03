@@ -1,0 +1,9 @@
+project: savantenvs/libiec61850
+target: fuzz-pres-userdata
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-pres-userdata/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_pres_userdata
+    libfuzzer: true
+    timeout: 5

@@ -1,0 +1,9 @@
+project: savantenvs/libiec61850
+target: fuzz-mms-decode
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-mms-decode/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_mms_decode
+    libfuzzer: true
+    timeout: 5

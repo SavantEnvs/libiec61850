@@ -1,0 +1,9 @@
+project: savantenvs/libiec61850
+target: fuzz-goose-subscriber
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-goose-subscriber/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_goose_subscriber
+    libfuzzer: true
+    timeout: 5
