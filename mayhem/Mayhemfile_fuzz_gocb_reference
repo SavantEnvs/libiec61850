@@ -1,0 +1,9 @@
+project: savantenvs/libiec61850
+target: fuzz-gocb-reference-mined-b74dd25
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-gocb-reference-mined-b74dd25/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_gocb_reference
+    libfuzzer: true
+    timeout: 5
